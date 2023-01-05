@@ -3,6 +3,9 @@ Tools for forex trading
 
 
 ## Tools
+
+Check the `tools` folder
+
 1. `profit-calculator.py` - Calculate profit/loss given buying or selling price
 
 ## Installation
