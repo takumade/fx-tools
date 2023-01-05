@@ -5,10 +5,13 @@ Tools for trading Deriv's Synthentic Indices. Written in Python
 ## Tools
 
 Check the `tools` folder
+*NOTE:* Tools are interactive so just run `python tool_name.py`
+
 
 1. `profit.py` - Calculate profit given entry price, take profit, lot size and positions
 2. `loss.py` - Calculate loss given entry price, stop loss, lot size and positions
-3. `get_take_profit.py` - Calculate a take profit given
+3. `stop_loss.py` - Calculate a stop loss given entry price, loss amount, lot size and position
+4. `risk_reward.py` - Calculate risk reward given entry price, SL, TP , lot size and positions 
 
 ## Installation
 1. Install `virtualenv`
