@@ -10,16 +10,29 @@ class ProfitLoss:
         totalPips = stopLoss - self.entryPrice
         yourLoss = (totalPips * self.lotSize) * self.positions
         
-        return {"total_pips": round(abs(totalPips),1), 
-                "total_loss": round(-abs(yourLoss),2)}
+        return [ round(abs(totalPips),1),   # pips
+                round(-abs(yourLoss),2) ]   # loss
     
     
     def calculateProfit(self, takeProfit):
         totalPips = takeProfit - self.entryPrice
-        yourLoss = (totalPips * self.lotSize) * self.positions
+        yourProfit = (totalPips * self.lotSize) * self.positions
         
-        return {"total_pips": round(abs(totalPips),1), 
-                "total_profit": round(abs(yourLoss),2)}
+        return [round(abs(totalPips),1), # pips
+                round(abs(yourProfit),2)]  # loss
     
     
+    def calculateRiskReward(self, profit, loss):
+        return float(abs(loss)/abs(profit)).as_integer_ratio()
     
+    def calculateStopLoss(self, loss, buyOrSell):
+        
+        stopLoss = 0
+        
+        if buyOrSell  == 'b':
+            stopLoss  = ((loss/self.positions) / self.lotSize) - self.entryPrice
+        elif buyOrSell == 's':
+            stopLoss  = ((loss/self.positions) / self.lotSize) + self.entryPrice
+        else:
+            stopLoss  = ((loss/self.positions) / self.lotSize) - self.entryPrice
+        return abs(stopLoss)
