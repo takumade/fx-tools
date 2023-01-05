@@ -1,5 +1,5 @@
 import math
-
+from lib.ProfitLoss import ProfitLoss
 
 def calculateProfit():
     print("PROFIT CALCULATOR\n")
@@ -9,12 +9,11 @@ def calculateProfit():
     lotSize = float(input("Lot Size: "))
     positions = int(input("Positions: "))
     
-    totalPips = takeProfit - entryPrice
-    yourProfit = (totalPips * lotSize) * positions
+    profitLoss = ProfitLoss(entryPrice, lotSize, positions)
+    result = profitLoss.calculateProfit(takeProfit)
     
-    print("Total Pips: ", totalPips)
-    print("Your profit: ",abs(yourProfit))
-    return abs(yourProfit)
+    print("Total Pips: ", result["total_pips"])
+    print("Your Profit: ", result["total_profit"])
     
       
 calculateProfit()
