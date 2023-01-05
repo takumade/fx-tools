@@ -16,6 +16,7 @@ Tools for forex trading
     ```
 3. Install modules
     ```sh
+    source env/bin/activate
     pip3 install -r requirements.txt
     ```
 4. Have fun
