@@ -10,7 +10,8 @@ class ProfitLoss:
         totalPips = stopLoss - self.entryPrice
         yourLoss = (totalPips * self.lotSize) * self.positions
         
-        return [totalPips, -abs(yourLoss)]
+        return {"total_pips": round(abs(totalPips),1), 
+                "total_loss": round(-abs(yourLoss),2)}
     
     
     def calculateProfit(self):
