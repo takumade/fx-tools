@@ -1,4 +1,5 @@
 import math
+from lib.ProfitLoss import ProfitLoss
 
 
 def calculateLoss():
@@ -8,12 +9,11 @@ def calculateLoss():
     lotSize = float(input("Lot Size: "))
     positions = int(input("Positions: "))
     
-    totalPips = stopLoss - entryPrice
-    yourLoss = (totalPips * lotSize) * positions
+    profitLoss = ProfitLoss(entryPrice, lotSize, positions)
+    result = profitLoss.calculateLoss(stopLoss)
     
-    print("Total Pips: ", totalPips)
-    print("Your loss: ", -abs(yourLoss))
-    return abs(yourLoss)
+    print("Total Pips: ", result["total_pips"])
+    print("Your loss: ", result["total_loss"])
     
     
       
