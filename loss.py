@@ -10,10 +10,10 @@ def calculateLoss():
     positions = int(input("Positions: "))
     
     profitLoss = ProfitLoss(entryPrice, lotSize, positions)
-    result = profitLoss.calculateLoss(stopLoss)
+    pips, loss =profitLoss.calculateLoss(stopLoss)
     
-    print("Total Pips: ", result["total_pips"])
-    print("Your loss: ", result["total_loss"])
+    print("Total Pips: ", pips)
+    print("Loss: ", loss)
     
     
       
