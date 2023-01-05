@@ -1,12 +1,14 @@
 # FX Tools
-Tools for forex trading
+Tools for trading Deriv's Synthentic Indices. Written in Python
 
 
 ## Tools
 
 Check the `tools` folder
 
-1. `profit-calculator.py` - Calculate profit/loss given buying or selling price
+1. `profit.py` - Calculate profit given entry price, take profit, lot size and positions
+2. `loss.py` - Calculate loss given entry price, stop loss, lot size and positions
+3. `get_take_profit.py` - Calculate a take profit given
 
 ## Installation
 1. Install `virtualenv`
