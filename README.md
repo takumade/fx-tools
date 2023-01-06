@@ -48,8 +48,16 @@ Check the `tools` folder
 
 ##  Examples
 
-`python risk_reward.py`
-`python stop_loss.py`
-`python loss.py`
+```sh
+python risk_reward.py
+```
+
+```sh
+python stop_loss.py
+```
+
+```sh
+python loss.py
+```
 
 
