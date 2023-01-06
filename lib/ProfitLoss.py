@@ -22,8 +22,9 @@ class ProfitLoss:
                 round(abs(yourProfit),2)]  # loss
     
     
-    def calculateRiskReward(self, profit, loss):
-        return float(abs(loss)/abs(profit)).as_integer_ratio()
+    def calculateRiskReward(self, profit, loss):        
+        return [abs(int(loss/loss)), abs(int(profit/loss))]
+
     
     def calculateStopLoss(self, loss, buyOrSell):
         

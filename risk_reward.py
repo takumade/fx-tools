@@ -14,12 +14,12 @@ def calculateRiskReward():
     ppips, profit = profitLoss.calculateProfit(takeProfit)
     lpips, loss = profitLoss.calculateLoss(stopLoss)
     
-    riskReward = profitLoss.calculateRiskReward(profit, loss)
+    lossRatio, profitRatio = profitLoss.calculateRiskReward(profit, loss)
     
     
     print("Profit: ", profit)
     print("Loss: ", loss)
-    print("Risk Reward: {0}:{1}".format(riskReward[0], riskReward[1]))
+    print("Risk Reward: {0}:{1}".format(lossRatio, profitRatio))
     
       
 calculateRiskReward()
