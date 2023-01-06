@@ -45,3 +45,11 @@ Check the `tools` folder
     pip3 install -r requirements.txt
     ```
 4. Have fun
+
+##  Examples
+
+`python risk_reward.py`
+`python stop_loss.py`
+`python loss.py`
+
+
