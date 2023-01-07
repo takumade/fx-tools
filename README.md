@@ -58,7 +58,7 @@ To enter interactive mode type
 python fx-tools.py -i 
 ```
 
-Setting variables
+### Setting variables
 
 ```sh
 FX-Tools> set stop_loss 5265.25621
@@ -67,7 +67,7 @@ FX-Tools> set take_profit 56267.256
 FX-Tools> set risk_reward 1:2
 ```
 
-Get variables
+### Get variables
 
 ```sh
 FX-Tools> get stop_loss 
@@ -80,7 +80,7 @@ FX-Tools> get risk_reward
 1:2
 ```
 
-Executing a tool
+### Executing a tool
 
 ```sh
 FX-Tools> exec get_stop_loss 
@@ -89,8 +89,13 @@ FX-Tools> exec risk_reward
 
 Getting Help
 
+```sh
+FX-Tools> help
+FX-Tools> help <tool_name>
+```
 
 
 ## CLI Mode
 
 Coming Soon!
+
