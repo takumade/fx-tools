@@ -12,6 +12,7 @@ Check the `tools` folder
 2. `loss.py` - Calculate loss given entry price, stop loss, lot size and positions
 3. `stop_loss.py` - Calculate a stop loss given entry price, loss amount, lot size and position
 4. `risk_reward.py` - Calculate risk reward given entry price, SL, TP , lot size and positions 
+5. `profit_loss_take_profit` - Calculate risk reward given entry price, loss amount, 
 
 ## Installation
 1. Install `virtualenv`
@@ -45,3 +46,13 @@ Check the `tools` folder
     pip3 install -r requirements.txt
     ```
 4. Have fun
+
+
+## Interactive Mode
+
+Coming Soon!
+
+
+## CLI Mode
+
+Coming Soon!
