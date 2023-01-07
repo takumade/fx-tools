@@ -99,3 +99,18 @@ FX-Tools> help <tool_name>
 
 Coming Soon!
 
+##  Examples
+
+```sh
+python risk_reward.py
+```
+
+```sh
+python stop_loss.py
+```
+
+```sh
+python loss.py
+```
+
+
