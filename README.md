@@ -5,7 +5,7 @@ Tools for trading Deriv's Synthentic Indices. Written in Python
 ## Tools
 
 Check the `tools` folder
-*NOTE:* Tools are interactive so just run `python tool_name.py`
+*NOTE:* Tools are interactive so just run `python tool_name.py e.g python profit.py`
 
 1. `fx-tools.py` - Run CLI mode or Interactive mode
 2. `profit.py` - Calculate profit given entry price, take profit, lot size and positions
@@ -98,19 +98,5 @@ FX-Tools> help <tool_name>
 ## CLI Mode
 
 Coming Soon!
-
-##  Examples
-
-```sh
-python risk_reward.py
-```
-
-```sh
-python stop_loss.py
-```
-
-```sh
-python loss.py
-```
 
 
