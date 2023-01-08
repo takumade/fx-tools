@@ -1,5 +1,5 @@
 import math
-from lib.ProfitLoss import ProfitLoss
+from classes.ProfitLoss import ProfitLoss
 
 def calculateProfit():
     print("PROFIT CALCULATOR\n")
