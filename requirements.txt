@@ -1,2 +1,3 @@
 semver==2.13.0
 versionner==1.5.3
+yapf==0.32.0
