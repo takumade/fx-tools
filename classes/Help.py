@@ -38,6 +38,7 @@ class Help:
             print("Requires:")
             for r in tool['requires']:
                 print("- " + r)
+            print("")
             
         except ValueError:
             print("[-] Tool doesnt exit")
