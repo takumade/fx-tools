@@ -18,6 +18,9 @@ class Interactive:
         if self.user_input.lower() == "list tools":
             help.list_tools()
         
+        if self.user_input.lower() == "getall vars":
+            self.fx_tools.get_all_vars()
+        
         if self.user_input.lower() == "help":
             help.fx_help()
             
@@ -56,18 +59,17 @@ class Interactive:
 
 
     def start(self):
-        print("""
-            
+        print("""     
     ███████╗██╗  ██╗  ████████╗ ██████╗  ██████╗ ██╗     ███████╗
     ██╔════╝╚██╗██╔╝  ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
     █████╗   ╚███╔╝█████╗██║   ██║   ██║██║   ██║██║     ███████╗
     ██╔══╝   ██╔██╗╚════╝██║   ██║   ██║██║   ██║██║     ╚════██║
     ██║     ██╔╝ ██╗     ██║   ╚██████╔╝╚██████╔╝███████╗███████║
     ╚═╝     ╚═╝  ╚═╝     ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
-                                                            
-        =[ fx-tools v1.0.0                                  ]                                                          
-    + -- --=[ {0} tools                                          ]   
-        """.format(len(tools_list.keys())))
+       """)
+        print("       =[ fx-tools v1.0.0                                  ]")                                                          
+        print("+ -- --=[ {0} tools                                          ]".format(len(tools_list.keys())))   
+
         
         user_input = ""
        

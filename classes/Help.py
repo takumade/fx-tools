@@ -5,16 +5,22 @@ class Help:
         pass
     
     def fx_help(self):
-        print("Help\n\n" +
-            
-        "list tools           - List all tools\n"+
-        "help tool <tool>     - Get tool help\n"+
-        "set <var> <value>    - set a variable\n"+
-        "get <var>            - get a variable\n"+
-        "del <var>            - delete a variable\n"+
-        "exec <tool>          - execute a tool\n"+
-
-        "exit, exit(), XXX    - Exit.\n")
+        
+        help = {
+            "list tools": "List all tools",
+        "help tool <tool>": "Get tool help",
+        "set <var> <value>": "Set a variable",
+        "get <var>": "Get a variable",
+        "getall vars": "Get all variables",
+        "del <var>": "Delete a variable",
+        "exec <tool>": "Execute a tool",
+         "exit, exit(), XXX": "Exit"
+        }
+        
+        print("Help: \n")
+        
+        for k in help.keys():
+            print("{0:30s}  - {1}".format(k, help[k]))
         
     
     def list_tools(self):
