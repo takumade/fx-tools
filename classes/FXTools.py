@@ -1,7 +1,14 @@
 class FXTools:
     
     def __init__(self):
-        self.variables = {}
+        self.variables = {
+            'positions': 1,
+            'lot_size': 0.2,
+            'entry_price': None,
+            'stop_loss': None,
+            'take_profit': None,
+            'loss_amount': None
+        }
     
     def set_variable(self, key, value):
         if key and value:
@@ -14,6 +21,11 @@ class FXTools:
             return self.variables[key]
         else:
             raise ValueError
+        
+    def get_all_vars(self):
+        print("\nAll Variables:\n")
+        for k in self.variables:
+            print("{0:25s}        : {1}".format(k, self.variables[k]))
     
     # def calculateLoss(self, stopLoss):
     #     totalPips = stopLoss - self.entryPrice
