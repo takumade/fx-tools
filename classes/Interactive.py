@@ -6,12 +6,25 @@ help = Help()
 
 class Interactive:
     def __init__(self) -> None:
-        pass
+        self.exit_list = ["exit", "bye", "XXX", "exit()"]
+        self.user_input = ""
+    
+    
+    
+    def process_input(self):
+        
+        if self.user_input.lower() == "list tools":
+            help.list_tools()
+        
+        if self.user_input.lower() == "help":
+            help.fx_help()
+            
+        
     
     
     def get_input(self):
-        user_input = input("fx-tools> ")
-        return user_input
+        self.user_input = input("fx-tools> ")
+
 
 
     def start(self):
@@ -29,14 +42,17 @@ class Interactive:
         """.format(len(tools_list.keys())))
         
         user_input = ""
-        exit_list = ["exit", "bye", "XXX", "exit()"]
+       
         
         try:
-            while exit_list.count(user_input) == 0:
-                user_input = self.get_input()
+            while self.exit_list.count(user_input) == 0:
+                self.get_input()
                 
-                if user_input == 'help':
-                    help.fx_help()
+                if self.exit_list.count(self.user_input) > 0:
+                    break 
+                
+                self.process_input()
+                
             
             print("bye bye!")
         except KeyboardInterrupt:
