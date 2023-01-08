@@ -19,7 +19,12 @@ class Interactive:
         if self.user_input.lower() == "help":
             help.fx_help()
             
-        
+        if self.user_input.lower().startswith("tool help"):
+            try:
+                tool_name = self.user_input.lower().split()[-1]
+                help.tool_help(tool_name)
+            except IndexError:
+                print("[-] Please enter tool name")
     
     
     def get_input(self):
