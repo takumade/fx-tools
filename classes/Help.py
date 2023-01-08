@@ -21,7 +21,7 @@ class Help:
         
         for k in help.keys():
             print("{0:30s}  - {1}".format(k, help[k]))
-        
+        print("")
     
     def list_tools(self):
         try:
