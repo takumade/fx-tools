@@ -9,3 +9,7 @@
 
 
 
+def getInput():
+    user_input = input("fx-tools> ")
+    return user_input
+
