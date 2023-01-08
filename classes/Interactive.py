@@ -27,14 +27,25 @@ class Interactive:
                 help.tool_help(tool_name)
             except IndexError:
                 print("[-] Please enter tool name e.g tool help fly")
+                
         if self.user_input.lower().startswith("set "):
             try:
                 key = self.user_input.lower().split()[1]
                 value = self.user_input.lower().split()[2]
                 self.fx_tools.set_variable(key, value)
-                print("[i] {0}:{1}".format(key, self.fx_tools.get_variable(key)))
-            except IndexError:
+                print("[i] {0}: {1}".format(key, self.fx_tools.get_variable(key)))
+            except (IndexError, ValueError):
                 print("[-] Please enter variable name e.g set cats 3")
+        
+        if self.user_input.lower().startswith("get "):
+            try:
+                key = self.user_input.lower().split()[1]
+                value = self.fx_tools.get_variable(key)
+                print("[i] {0}: {1}".format(key, value))
+            except (IndexError, ValueError):
+                print("[-] Please enter variable name e.g set cats 3")
+            except KeyError:
+                print("[i] Variable not set!")
             
             
     
