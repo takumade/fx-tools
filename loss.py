@@ -1,5 +1,5 @@
 import math
-from classes.ProfitLoss import ProfitLoss
+from classes.FXTools import ProfitLoss
 
 
 def calculateLoss():
