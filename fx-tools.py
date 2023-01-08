@@ -9,6 +9,17 @@
 import argparse
 
 
+def fx_help():
+    print("""Help
+          
+list tools           - List all tools
+set <var> <value>    - set a variable
+get <var>            - get a variable
+del <var>            - delete a variable
+exec <tool>          - execute a tool
+exit, exit(), XXX    - Exit.
+          """)
+
 def parse_arguments():
     parser = argparse.ArgumentParser(description ="Tools for trading Deriv's Synthentic Indices. Written in Python")
     parser.add_argument('-i', '--interactive',
@@ -49,6 +60,9 @@ def interactive():
     try:
         while exit_list.count(user_input) == 0:
             user_input = get_input()
+            
+            if user_input == 'help':
+                fx_help()
         
         print("bye bye!")
     except KeyboardInterrupt:
