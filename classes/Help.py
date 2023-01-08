@@ -16,6 +16,15 @@ class Help:
 
         "exit, exit(), XXX    - Exit.\n")
         
+    
+    def list_tools(self):
+        try:
+            print("Available tools:\n")
+            for t in tools_list.keys():
+                print("- "+t)
+        except:
+            print("Error: ")
+        
         
     def tool_help(self, tool_name):
         try: 
