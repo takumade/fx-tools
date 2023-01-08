@@ -8,7 +8,7 @@ class Help:
         print("Help\n\n" +
             
         "list tools           - List all tools\n"+
-        "help <tool>          - Get tool help\n"+
+        "help tool <tool>     - Get tool help\n"+
         "set <var> <value>    - set a variable\n"+
         "get <var>            - get a variable\n"+
         "del <var>            - delete a variable\n"+
