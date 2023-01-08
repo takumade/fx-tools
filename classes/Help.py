@@ -18,7 +18,21 @@ class Help:
         
         
     def tool_help(self, tool_name):
-        
+        try: 
+            tool = tools_list[tool_name]
+            
+            print("Tool Name: ", tool['name'])
+            print("")
+            print("Description:")
+            print(tool['desc'])
+            print("")
+            print("Requires:")
+            for r in tool['requires']:
+                print("- " + r)
+            
+        except ValueError:
+            print("[-] Tool doesnt exit")
+   
     
     
     
