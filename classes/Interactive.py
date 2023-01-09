@@ -1,6 +1,6 @@
 from data.tools_list import tools_list
 from classes.Help import Help
-from classes.FXTools import FXTools
+from classes.Calculations import Calculations
 
 
 help = Help()
@@ -9,7 +9,7 @@ class Interactive:
     def __init__(self) -> None:
         self.exit_list = ["exit", "bye", "XXX", "exit()"]
         self.user_input = ""
-        self.fx_tools = FXTools()
+        self.fx_calcs = Calculations()
     
     
     
@@ -19,7 +19,7 @@ class Interactive:
             help.list_tools()
         
         if self.user_input.lower() == "getall vars":
-            self.fx_tools.get_all_vars()
+            self.fx_calcs.get_all_vars()
         
         if self.user_input.lower() == "help":
             help.fx_help()
@@ -35,15 +35,15 @@ class Interactive:
             try:
                 key = self.user_input.lower().split()[1]
                 value = self.user_input.lower().split()[2]
-                self.fx_tools.set_variable(key, value)
-                print("[i] {0}: {1}".format(key, self.fx_tools.get_variable(key)))
+                self.fx_calcs.set_variable(key, value)
+                print("[i] {0}: {1}".format(key, self.fx_calcs.get_variable(key)))
             except (IndexError, ValueError):
                 print("[-] Please enter variable name e.g set cats 3")
         
         if self.user_input.lower().startswith("get "):
             try:
                 key = self.user_input.lower().split()[1]
-                value = self.fx_tools.get_variable(key)
+                value = self.fx_calcs.get_variable(key)
                 print("[i] {0}: {1}".format(key, value))
             except (IndexError, ValueError):
                 print("[-] Please enter variable name e.g set cats 3")
@@ -61,11 +61,11 @@ class Interactive:
     def run_tool(self, tool_name):
         print("RUNNING ", tool_name)
         if tool_name == "loss":
-            pips,loss = self.fx_tools.calculate_loss()
+            pips,loss = self.fx_calcs.calculate_loss()
             print("PIPS: ",pips)
             print("LOSS: ${0}".format(loss))
         elif tool_name == "profit":
-            pips,profit = self.fx_tools.calculate_profit()
+            pips,profit = self.fx_calcs.calculate_profit()
             print("PIPS: ",pips)
             print("PROFIT: ${0}".format(profit))
             

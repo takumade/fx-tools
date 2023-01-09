@@ -1,4 +1,4 @@
-class FXTools:
+class Calculations:
     
     def __init__(self):
         self.variables = {

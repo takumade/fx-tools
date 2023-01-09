@@ -1,5 +1,5 @@
 import math
-from classes.FXTools import ProfitLoss
+from classes.Calculations import ProfitLoss
 
 def calculateRiskReward():
     print("ROSK REWARD CALCULATOR\n")
