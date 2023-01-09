@@ -35,12 +35,12 @@ class FXTools:
                 round(-abs(yourLoss),2) ]   # loss
     
     
-    # def calculateProfit(self, takeProfit):
-    #     totalPips = takeProfit - self.entryPrice
-    #     yourProfit = (totalPips * self.lotSize) * self.positions
+    def calculate_profit(self):
+        totalPips = float(self.variables['take_profit']) - float(self.variables['entry_price'])
+        yourProfit = (totalPips * float(self.variables['lot_size'])) * int(self.variables['positions'])
         
-    #     return [round(abs(totalPips),1), # pips
-    #             round(abs(yourProfit),2)]  # loss
+        return [round(abs(totalPips),1), # pips
+                round(abs(yourProfit),2)]  # profit
     
     
     # def calculateRiskReward(self, profit, loss):        
