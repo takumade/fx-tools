@@ -24,7 +24,7 @@ class Interactive:
         if self.user_input.lower() == "help":
             help.fx_help()
             
-        if self.user_input.lower().startswith("tool help"):
+        if self.user_input.lower().startswith("help tool"):
             try:
                 tool_name = self.user_input.lower().split()[-1]
                 help.tool_help(tool_name)
@@ -49,9 +49,23 @@ class Interactive:
                 print("[-] Please enter variable name e.g set cats 3")
             except KeyError:
                 print("[i] Variable not set!")
+        
+        if self.user_input.lower().startswith("run "):
+            try:
+                tool_name = self.user_input.lower().split()[1]
+                self.run_tool(tool_name)
+            except IndexError:
+                print("[-] Please enter tool name e.g run kill_mouse")  
             
             
-    
+    def run_tool(self, tool_name):
+        print("RUNNING ", tool_name)
+        if (tool_name == "loss"):
+            pips,loss = self.fx_tools.calculate_loss()
+            print("PIPS: ",pips)
+            print("LOSS: ${0}".format(loss))
+        
+        
     
     def get_input(self):
         self.user_input = input("fx-tools> ")

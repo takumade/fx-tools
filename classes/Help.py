@@ -13,7 +13,7 @@ class Help:
         "get <var>": "Get a variable",
         "getall vars": "Get all variables",
         "del <var>": "Delete a variable",
-        "exec <tool>": "Execute a tool",
+        "run <tool>": "Execute a tool",
          "exit, exit(), XXX": "Exit"
         }
         

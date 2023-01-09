@@ -27,12 +27,12 @@ class FXTools:
         for k in self.variables:
             print("{0:25s}        : {1}".format(k, self.variables[k]))
     
-    # def calculateLoss(self, stopLoss):
-    #     totalPips = stopLoss - self.entryPrice
-    #     yourLoss = (totalPips * self.lotSize) * self.positions
+    def calculate_loss(self):
+        totalPips = float(self.variables['stop_loss']) - float(self.variables['entry_price'])
+        yourLoss = (totalPips * float(self.variables['lot_size'])) * int(self.variables['positions'])
         
-    #     return [ round(abs(totalPips),1),   # pips
-    #             round(-abs(yourLoss),2) ]   # loss
+        return [ round(abs(totalPips),1),   # pips
+                round(-abs(yourLoss),2) ]   # loss
     
     
     # def calculateProfit(self, takeProfit):
