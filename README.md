@@ -7,10 +7,8 @@ Tools for trading Deriv's Synthentic Indices. Written in Python
 Check the `tools` folder
 *NOTE:* Tools are interactive so just run `python tool_name.py e.g python profit.py`
 
-1. `fx-tools.py` - Run CLI mode or Interactive mode
-2. `profit.py` - Calculate profit given entry price, take profit, lot size and positions
-3. `loss.py` - Calculate loss given entry price, stop loss, lot size and positions
-4. `stop_loss.py` - Calculate a stop loss given entry price, loss amount, lot size and position
+1. `fx-tools.py -i` - Run in Interactive mode
+2. `stop_loss.py` - Calculate a stop loss given entry price, loss amount, lot size and position
 5. `risk_reward.py` - Calculate risk reward given entry price, SL, TP , lot size and positions 
 6. `profit_loss_take_profit` - Calculate risk reward given entry price, loss amount, 
 
@@ -61,42 +59,35 @@ python fx-tools.py -i
 ### Setting variables
 
 ```sh
-FX-Tools> set stop_loss 5265.25621
-FX-Tools> set loss_amount 20
-FX-Tools> set take_profit 56267.256
-FX-Tools> set risk_reward 1:2
+fx-tools> set stop_loss 5265.25621
+fx-tools> set loss_amount 20
+fx-tools> set take_profit 56267.256
+fx-tools> set risk_reward 1:2
 ```
 
 ### Get variables
 
 ```sh
-FX-Tools> get stop_loss 
+fx-tools> get stop_loss 
 5265.25621
-FX-Tools> get loss_amount 
+fx-tools> get loss_amount 
 20
-FX-Tools> get take_profit 
+fx-tools> get take_profit 
 56267.256
-FX-Tools> get risk_reward 
+fx-tools> get risk_reward 
 1:2
 ```
 
 ### Executing a tool
 
 ```sh
-FX-Tools> exec get_stop_loss 
-FX-Tools> exec risk_reward
+fx-tools> run get_stop_loss 
+fx-tools> run risk_reward
 ```
 
 Getting Help
 
 ```sh
-FX-Tools> help
-FX-Tools> help <tool_name>
+fx-tools> help
+fx-tools> help tool <tool_name>
 ```
-
-
-## CLI Mode
-
-Coming Soon!
-
-
