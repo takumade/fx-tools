@@ -68,6 +68,18 @@ class Interactive:
             pips,profit = self.fx_calcs.calculate_profit()
             print("PIPS: ",pips)
             print("PROFIT: ${0}".format(profit))
+        elif tool_name == "risk_reward":
+            loss_ratio, profit_ratio, profit, loss = self.fx_calcs.calculate_risk_reward()
+            
+            print("PROFIT: ${0}".format(profit))
+            print("LOSS: ${0}".format(loss))
+            print("RISK REWARD: {0}/{1}".format(loss_ratio, profit_ratio))
+        elif tool_name == "stop_loss":
+            buy_stop_loss, sell_stop_loss = self.fx_calcs.calculate_stop_loss()
+            
+            print("BUY STOP LOSS: {0}".format(buy_stop_loss))
+            print("SELL STOP LOSS: {0}".format(sell_stop_loss))
+            
             
         print("")
         
