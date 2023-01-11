@@ -1,7 +1,7 @@
 tools_list = {
-    'loss': {
-        'name': 'loss',
-        'desc': 'Calculate loss given entry price, stop loss, lot size and positions',
+    'risk': {
+        'name': 'risk',
+        'desc': 'Calculate loss/risk given entry price, stop loss, lot size and positions',
         'requires': [
             'entry_price',
             'lot_size',
@@ -9,9 +9,9 @@ tools_list = {
             'stop_loss'  
         ] 
     },
-    'profit': {
-        'name': 'profit',
-        'desc': 'Calculate profit given entry price, take profit, lot size and positions',
+    'reward': {
+        'name': 'reward',
+        'desc': 'Calculate profit/reward given entry price, take profit, lot size and positions',
         'requires': [
             'entry_price',
             'lot_size',
