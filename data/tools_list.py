@@ -29,6 +29,16 @@ tools_list = {
             'take_profit',
             'stop_loss'
         ] 
+    },
+    'stop_loss': {
+        'name': 'stop_loss',
+        'desc': 'Calculate stop loss given entry point, loss_amount, lot size and positions',
+        'requires': [
+            'entry_price',
+            'lot_size',
+            'positions',
+            'loss_amount'
+        ] 
     }
     
 }
