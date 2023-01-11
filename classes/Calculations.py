@@ -62,3 +62,39 @@ class Calculations:
         stop_loss_sell  = ((loss_amount/ positions) / lot_size) + entry_price
 
         return [abs(stop_loss_buy), abs(stop_loss_sell)]
+    
+    def caculate_stop_loss_take_profit():
+        # Get Take Profit and Stop Loss given 
+        # 1. Entry Point 
+        # 2. Lose amount 
+        # 3. Lot size
+        # 4. Risk reward 
+
+        # Algorithm
+        # 1. Calculate SL using Lose Amount, Entry Point and Lot Size 
+        # 2. Calculate the difference between SL and Entry Point
+        # 3. Multiply the difference from 2 by the risk ratio
+        # 4. Multiply the difference from 2 by reward ratio
+        # 5. Add result from 4 to entry point to get TP
+        # Print TP
+
+        pass
+    
+    
+    def calculate_lot_size(self):
+        # Calculate Lot Size given loss amount, enrty point, stop loss
+        
+        entry_price = self.variables['entry_price']
+        
+        
+        
+        pass
+    
+    def calculate_lot_size(self):
+        entry_price = self.variables['entry_price']
+        stop_loss = self.variables['stop_loss']
+        loss_amount = self.variables['loss_amount']
+        
+        lot_size = loss_amount / (entry_price-stop_loss) 
+        
+        return round(abs(lot_size), 2)
