@@ -44,17 +44,17 @@ class Calculations:
     
     
     def calculate_risk_reward(self):    
-        loss = self.variables['loss']
-        profit = self.variables['profit']    
-        return [abs(int(loss/loss)), abs(int(profit/loss))]
+        ppips, profit = self.calculate_profit()
+        lpips, loss = self.calculate_loss()
+          
+        return [abs(int(loss/loss)), abs(int(profit/loss)), profit, loss]
 
     
-    def calculate_stop_Loss(self, loss):
+    def calculate_stop_loss(self, loss):
         
         positions = self.variables['positions']
         lot_size = self.variables['lot_size']
         entry_price = self.variables['entry_price']
-        loss
         
         
         stop_loss_buy  = ((loss/ positions) / lot_size) - entry_price
