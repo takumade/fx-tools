@@ -79,6 +79,10 @@ class Interactive:
             
             print("BUY STOP LOSS: {0}".format(buy_stop_loss))
             print("SELL STOP LOSS: {0}".format(sell_stop_loss))
+        elif tool_name == "lot_size":
+            lot_size = self.fx_calcs.calculate_lot_size()
+            print("LOT SIZE: {0}".format(lot_size))
+            
             
             
         print("")
