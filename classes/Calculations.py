@@ -80,16 +80,6 @@ class Calculations:
 
         pass
     
-    
-    def calculate_lot_size(self):
-        # Calculate Lot Size given loss amount, enrty point, stop loss
-        
-        entry_price = self.variables['entry_price']
-        
-        
-        
-        pass
-    
     def calculate_lot_size(self):
         entry_price = self.variables['entry_price']
         stop_loss = self.variables['stop_loss']

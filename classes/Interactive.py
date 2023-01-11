@@ -60,11 +60,11 @@ class Interactive:
             
     def run_tool(self, tool_name):
         print("RUNNING ", tool_name)
-        if tool_name == "loss":
+        if tool_name == "risk":
             pips,loss = self.fx_calcs.calculate_loss()
             print("PIPS: ",pips)
             print("LOSS: ${0}".format(loss))
-        elif tool_name == "profit":
+        elif tool_name == "reward":
             pips,profit = self.fx_calcs.calculate_profit()
             print("PIPS: ",pips)
             print("PROFIT: ${0}".format(profit))
