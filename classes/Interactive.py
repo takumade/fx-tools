@@ -68,6 +68,12 @@ class Interactive:
             pips,profit = self.fx_calcs.calculate_profit()
             print("PIPS: ",pips)
             print("PROFIT: ${0}".format(profit))
+        elif tool_name == "risk_reward":
+            loss_ratio, profit_ratio, profit, loss = self.fx_calcs.calculate_risk_reward()
+            print("PROFIT: ${0}".format(profit))
+            print("LOSS: ${0}".format(loss))
+            print("RISK REWARD: {0}/{1}".format(loss_ratio, profit_ratio))
+            
             
         print("")
         
