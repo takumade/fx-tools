@@ -50,14 +50,15 @@ class Calculations:
         return [abs(int(loss/loss)), abs(int(profit/loss)), profit, loss]
 
     
-    def calculate_stop_loss(self, loss):
+    def calculate_stop_loss(self):
         
         positions = self.variables['positions']
         lot_size = self.variables['lot_size']
         entry_price = self.variables['entry_price']
+        loss_amount = self.variables['loss_amount']
         
         
-        stop_loss_buy  = ((loss/ positions) / lot_size) - entry_price
-        stop_loss_sell  = ((loss/ positions) / lot_size) + entry_price
+        stop_loss_buy  = ((loss_amount/ positions) / lot_size) - entry_price
+        stop_loss_sell  = ((loss_amount/ positions) / lot_size) + entry_price
 
         return [abs(stop_loss_buy), abs(stop_loss_sell)]
