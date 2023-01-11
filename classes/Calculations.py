@@ -43,18 +43,21 @@ class Calculations:
                 round(abs(yourProfit),2)]  # profit
     
     
-    # def calculateRiskReward(self, profit, loss):        
-    #     return [abs(int(loss/loss)), abs(int(profit/loss))]
+    def calculate_risk_reward(self):    
+        loss = self.variables['loss']
+        profit = self.variables['profit']    
+        return [abs(int(loss/loss)), abs(int(profit/loss))]
 
     
-    # def calculateStopLoss(self, loss, buyOrSell):
+    def calculate_stop_Loss(self, loss):
         
-    #     stopLoss = 0
+        positions = self.variables['positions']
+        lot_size = self.variables['lot_size']
+        entry_price = self.variables['entry_price']
+        loss
         
-    #     if buyOrSell  == 'b':
-    #         stopLoss  = ((loss/self.positions) / self.lotSize) - self.entryPrice
-    #     elif buyOrSell == 's':
-    #         stopLoss  = ((loss/self.positions) / self.lotSize) + self.entryPrice
-    #     else:
-    #         stopLoss  = ((loss/self.positions) / self.lotSize) - self.entryPrice
-    #     return abs(stopLoss)
+        
+        stop_loss_buy  = ((loss/ positions) / lot_size) - entry_price
+        stop_loss_sell  = ((loss/ positions) / lot_size) + entry_price
+
+        return [abs(stop_loss_buy), abs(stop_loss_sell)]
