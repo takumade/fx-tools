@@ -8,9 +8,6 @@ Check the `tools` folder
 *NOTE:* Tools are interactive so just run `python tool_name.py e.g python profit.py`
 
 1. `fx-tools.py -i` - Run in Interactive mode
-2. `stop_loss.py` - Calculate a stop loss given entry price, loss amount, lot size and position
-5. `risk_reward.py` - Calculate risk reward given entry price, SL, TP , lot size and positions 
-6. `profit_loss_take_profit` - Calculate risk reward given entry price, loss amount, 
 
 ## Installation
 1. Install `virtualenv`
@@ -47,13 +44,16 @@ Check the `tools` folder
 
 
 ## Interactive Mode
-
-Coming Soon!
-
 To enter interactive mode type 
 
 ```sh
 python fx-tools.py -i 
+```
+
+### Getting help
+
+```sh
+fx-tools> help
 ```
 
 ### Setting variables
